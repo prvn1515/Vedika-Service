@@ -8,10 +8,9 @@ node{
      def gradleCMD = "${gradleHome}/bin/gradle"
      sh "${gradleCMD} clean build"
      } 
-     
-   stage('playbook Execution'){   
-     sh label: '', script: '''/root/praveen
-     sudo ansible-playbook main.yaml'''
+      stage ('deploy to remote'){
+     sh label: '', script: 'scp /var/lib/jenkins/workspace/servicepipe/vedika-service.tar.gz root@34.234.193.219:/root/praveen
+'
      }
      }
    
