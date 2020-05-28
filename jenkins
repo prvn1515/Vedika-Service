@@ -10,7 +10,7 @@ node{
      } 
   stage('playbook Execution'){   
      sh label: '', script: '''cd /home/ubuntu/scripts
-     sudo ansible-playbook play.yaml'''
+     sudo ansible-playbook main.yaml'''
      }
      }
    
