@@ -9,8 +9,7 @@ node{
      sh "${gradleCMD} clean build"
      } 
       stage ('deploy to remote'){
-     sh label: '', script: 'scp /var/lib/jenkins/workspace/servicepipe/vedika-service.tar.gz root@34.234.193.219:/root/praveen
-'
+     sh label: '', script: 'scp /var/lib/jenkins/workspace/servicepipe/vedika-service.tar.gz root@34.234.193.219:/root/praveen'
      }
      }
    
